@@ -79,4 +79,18 @@ def show_game_rules():
         time.sleep(3)
         show_game_rules()
 
+#Function to display the leaderboard, to be added
+def display_leaderboard():
+    global show_leaderboard
+    # Code to display the leaderboard based on the show_leaderboard flag
 
+
+#Function to start the quiz
+def start_quiz():
+    user_name = get_username()
+    amount_questions = how_many_questions()
+    quiz_questions = start_random_quiz(amount_questions)
+    points = conduct_quiz(quiz_questions, amount_questions)
+    end_message(user_name, points)
+    update_leaderboard(amount_questions, user_name, points)
+    user_choice_exit()
