@@ -52,3 +52,31 @@ def handle_menu_selection():
               "for Leaderboard, or 'r or R' for Game Rules.")
         print("Please type the correct option.\n")
         display_game_menu()
+
+#Function to show the game rules
+def show_game_rules():
+    clear()
+    print("Welcome to Game Rules!")
+    print("""
+        This quiz consists of 5 or 10 questions, and the answer for each
+        question will be either one of two options that are displayed
+        underneath. You will have to Type either '1' or '2' to select
+        the answer you think is the correct one and press Enter.
+        The quiz will continue until all questions have been played
+        for the selected amount of questions. Good luck!\n""")
+    print("Type 'm or M' to return to the Menu.")
+    try:
+        while True:
+            back_to_menu = input("\n").upper()
+            if back_to_menu not in ["M"]:
+                raise ValueError
+            else:
+                clear()
+                display_game_menu()
+    except ValueError:
+        clear()
+        print("Did you really press 'm or M'? Try again!")
+        time.sleep(3)
+        show_game_rules()
+
+
