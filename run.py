@@ -28,3 +28,27 @@ def display_game_menu():
     print("Type 's or S' to Start the Quiz, 'l or L'"
           "for Leaderboard, or 'r or R' for Game Rules.")
     handle_menu_selection()
+
+# Function to handle game menu input
+def handle_menu_selection():
+    try:
+        while True:
+            option = input("\n").upper()
+            if option not in ["S", "L", "R"]:
+                raise ValueError
+            else:
+                if option == 'S':
+                    start_quiz()
+                    break
+                elif option == 'L':
+                    show_leaderboard()  # Adjusted function call
+                    break
+                elif option == 'R':
+                    show_game_rules()  # Adjusted function call
+                    break
+    except ValueError:
+        clear()
+        print("Invalid input! Choose 's or S' for Start Quiz, 'l or L'"
+              "for Leaderboard, or 'r or R' for Game Rules.")
+        print("Please type the correct option.\n")
+        display_game_menu()
