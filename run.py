@@ -94,3 +94,27 @@ def start_quiz():
     end_message(user_name, points)
     update_leaderboard(amount_questions, user_name, points)
     user_choice_exit()
+
+
+# Function to let the user enter a usrnamne
+def get_username():
+    clear()
+    print("""Before we can start the quiz for you, you need a username!\n
+    You can choose anything you want but it can't be longer than
+    10 characters and it has to be in letters
+    (not numbers or special characters).\n""")
+    try:
+        while True:
+            user_name = str(input("Write your username:\n"))
+            if len(user_name) <= 10 and user_name.isalpha():
+                print("")
+                print(f"Thank you {user_name}!")
+                return user_name
+            else:
+                print("")
+                print("Not longer than 10 characters.")
+                print("Written with numbers or special characters.")
+                print("Try again!\n")
+    except ValueError:
+        get_username()
+
