@@ -24,3 +24,11 @@ SHEET = GSPREAD_CLIENT.open('NFL_Quiz')
 #This function adds the ability to clear the terminal
 def clear():
     os.system("cls" if os.name == "nt" else "clear")
+
+# Function to start the game, 
+def game_start():
+
+    clear()
+    start_text = pyfiglet.figlet_format("N F L  Q U I Z", font="3-d")
+    print(start_text)
+    game_menu()
