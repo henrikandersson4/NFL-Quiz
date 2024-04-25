@@ -32,3 +32,16 @@ def game_start():
     start_text = pyfiglet.figlet_format("N F L  Q U I Z", font="3-d")
     print(start_text)
     game_menu()
+
+
+#Game menu presenting you with the 'NFL Quiz' figlet, aswell as three options whether you want to start the game, see the leader board or see the rules.
+def game_menu():
+    print("Welcome to a 'NFL Quiz' the game that will test your knowledge about NFL trivia\n")
+    print("Type 'S/s' to start the quiz, 'L/l' to see the leaderboard or 'R/r' to see the rules")
+    print("""
+    -       'S/s' Start Quiz        -
+    -       'L/l' Leaderboard       -
+    -       'R/r' Game Rules        -\n""")
+
+
+game_start()
