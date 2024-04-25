@@ -4,12 +4,14 @@
 import gspread
 from google.oauth2.service_account import Credentials
 
+#The scope below lists the APIs that my program should access in order to run
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive.file",
     "https://www.googleapis.com/auth/drive"
     ]
 
+#Eveything to do with google credentials below are copied from Code Institute Love Sandwiches project
 CREDS = Credentials.from_service_account_file('creds.json')
 SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
