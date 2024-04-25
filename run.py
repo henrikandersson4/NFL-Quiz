@@ -42,6 +42,30 @@ def game_menu():
     -       'S/s' Start Quiz        -
     -       'L/l' Leaderboard       -
     -       'R/r' Game Rules        -\n""")
+    menu_options()
 
 
-game_start()
+#Menu with options to either start the game, see the leadwerboard or to see the rules
+def menu_options():
+    try:
+        while True:
+            option = input().upper()
+            if option not in ["S", "L", "R"]:
+                raise ValueError
+            else:
+                if option == 'S':
+                    game()
+                    break
+                elif option == 'L':
+                    leaderboard()
+                    break
+                elif option == 'R':
+                    rules()
+                    break
+    except ValueError:
+        clear()
+        print("Input error! You did not type 'S/s', 'L/l' or 'R/r'")
+        print("Please type one of the following: 'S/s' for ")
+        print("Start Quiz,'L/l' for Leaderboard or")
+        print("'R/r' to see the Rules.\n")
+        game_menu()
