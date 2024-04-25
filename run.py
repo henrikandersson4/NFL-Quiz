@@ -6,6 +6,7 @@ import pyfiglet
 import time
 import gspread
 from google.oauth2.service_account import Credentials
+from questions import nfl_questions
 
 #The scope below lists the APIs that my program should access in order to run
 SCOPE = [
