@@ -68,4 +68,5 @@ def menu_options():
         print("Please type one of the following: 'S/s' for ")
         print("Start Quiz,'L/l' for Leaderboard or")
         print("'R/r' to see the Rules.\n")
+        time.sleep(3)
         game_menu()
