@@ -157,6 +157,14 @@ def get_score_from_sheet(sheet_name):
     return data
 
 
+def display_leaderboard(data, description):
+    print(f"{description}:\n")
+    leaders = min(len(data), 3)
+    for i in range(leaders):
+        print(f"{i + 1}) {data[i][0]} {data[i][1]} Points\n")
+    print("")
+
+
 def ask_to_leaderboard(num_questions, correct_answers):
     if num_questions == 5 and correct_answers <= 2:
         print("Better luck next time!")
