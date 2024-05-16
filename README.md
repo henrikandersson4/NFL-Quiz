@@ -7,6 +7,8 @@ To play the quiz you can click this [link](https://henriks-nfl-quiz-568e345c5752
 
 ## Intention
 This application was created by me with the porpuse of being my Third Portfolio Project for Code Institutes Full Stack Software Development Course. The main criteria for the Third Portfolio Project was to use Python as the coding language.
+
+
 ## Technologies Used
 ### Languages
 * Python was used for the functionality of the program
@@ -50,3 +52,9 @@ I manually tested the code by doing the following:
 - Tried to play the game wrong in many different ways to try and break it, but i din't manage to do it.
 - Made many test runs to see that score was calculated correctly and that data was read and sent to the google sheets document. 
 - Asked friends and family to visit the deployed Heroku site to see if they could find any bugs or break it in any way.
+
+Results from PEP8 test:
+
+![PEP8 Linter](images/PEP8.png)
+
+The two error codes that the code linter points out, are two different functions that are longer than 79 characters. Unfortunately i did not have the time to find a solution for this. But his does not effect the function of the program since its not a visual thing but rather soething that happens in the background.
