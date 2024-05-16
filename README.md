@@ -114,3 +114,7 @@ The two error codes that the code linter points out, are two different functions
     - In the 'Deploy' tab there is an option to enable 'Automatic Deploys'. This will deploy a new version of the app automaticlly every time there is a push to `main`
 
 </details>
+
+## Credits
+- **Stack Overflow**: A online community for developers to ask questions, share knowledge and projects.
+- **Tutor support**: Thank you to Code Institutes Tutor Support team. 
