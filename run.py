@@ -142,3 +142,29 @@ def ask_to_leaderboard(num_questions, correct_answers):
                     clear()
                     end_game()
                 break
+
+def name(correct_answers, num_questions):
+    print("\nPlease type a name using no more than 10 characters containing")
+    print("only letters and/or numbers")
+    try:
+        while True:
+            player_name = str(input("Input a name:\n"))
+            if len(player_name) <= 10 and player_name.isalnum():
+                print(f"Thank you {player_name}!")
+                print("Contacting database...")
+                time.sleep(0.4)
+                print("Uploading score to database...")
+                time.sleep(1.5)
+                print("Upload finished. Thank you for playing!")
+                player_to_leaderboard(correct_answers, num_questions, player_name)
+                time.sleep(1)
+                return player_name
+            else:
+                raise ValueError
+    except ValueError:
+        print("Did you input a name no longer than 10 characters and")
+        print("only containing letters and/or numbers?")
+        print("Please try again!\n")
+        time.sleep(3)
+        clear()
+        name(correct_answers, num_questions)
