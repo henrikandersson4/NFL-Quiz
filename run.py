@@ -168,3 +168,16 @@ def name(correct_answers, num_questions):
         time.sleep(3)
         clear()
         name(correct_answers, num_questions)
+
+
+def player_to_leaderboard(correct_answers, num_questions, player_name):
+    if num_questions == 5:
+        player_points_five = SHEET.worksheet('fiveq')
+        player_points_five.append_row([player_name, correct_answers])
+        clear()
+        end_game()
+    elif num_questions == 10:
+        player_points_ten = SHEET.worksheet('tenq')
+        player_points_ten.append_row([player_name, correct_answers])
+        clear()
+        end_game()
