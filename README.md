@@ -69,3 +69,48 @@ Results from PEP8 test:
 ![PEP8 Linter](images/PEP8.png)
 
 The two error codes that the code linter points out, are two different functions that are longer than 79 characters. Unfortunately i did not have the time to find a solution for this. But his does not effect the function of the program since its not a visual thing but rather soething that happens in the background.
+
+## Deployment
+
+### Via Heroku
+
+<details>
+
+<summary><strong>Click to view Heroku's deployment instructions</strong></summary>
+
+1. **Sign Up/Login to Heroku**
+    - Sign up for a Heroku account at [Heroku](https://www.heroku.com/) or log in if you already have an account.
+
+2. **Create a New App on Heroku**
+    - Once you have logged in, navigate to your Heroku dashboard and click on the 'New button', then select 'Create new app'.
+    - Choose a unique name for your app and select the region closest to your location.
+
+3. **Connect GitHub Repository**
+    - After creating your app, navigate to the Deploy tab in your app's dashboard.
+    - Under the Deployment method section, select 'GitHub' as the deployment method.
+    - Search for your GitHub repository in the Connect to GitHub section and click Connect.
+
+4. **Configure Deployment Options**
+    - Once connected, choose the branch you want to deploy (e.g. *main*) and optionally enable automatic deploys for future commits.
+
+5. **Select Framework**
+    - Since the Contact Manager includes both Python and Node.js components, you need to specify the correct buildpacks for deployment. 
+    - Under the *Settings* tab of your Heroku app, navigate to the 'Buildpacks' section and add the appropriate buildpacks for Python and Node.js.
+   (It's important that the Python buildpack is first in the list)
+    - Under the section 'Config Vars' add the following environment variables
+    - Type 'CREDS' in the 'key' field and in the next field(Value) enter your own Google Credentials from the 'CREDS.JSON' file.
+    - Type 'PORT' in the 'Key' field an in the next field(Value) enter 8000.
+
+6. **Deploy Branch**
+    - After configuring the deployment options, manually deploy your application by clicking the **Deploy Branch** button.
+
+7. **Monitor Deployment Progress**
+    - Heroku will start deploying your application from the selected GitHub branch. You can monitor the deployment progress from the activity log on the same page.
+
+8. **View Application**
+    - Once the deployment is complete, Heroku will provide you with a URL to access your deployed application. Click on **View** button to open your application in a new tab.
+
+9. **(Optional) Automatic Deploys**
+    - In the 'Deploy' tab there is an option to enable 'Automatic Deploys'. This will deploy a new version of the app automaticlly every time there is a push to `main`
+
+</details>
