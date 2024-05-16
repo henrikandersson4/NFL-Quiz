@@ -42,3 +42,11 @@ The fifth main feature is that the game gives you the option to submit your scor
 ### Future features to add
 - Increase the number of questions the game can randomize between. To avoid players from memorizing all answers.
 - Increase answer options from 2 to 4. To make it harder to guess the correct answer.
+
+## Testing
+I manually tested the code by doing the following:
+
+- Passed the code through a PEP8 linter to check for errors.
+- Tried to play the game wrong in many different ways to try and break it, but i din't manage to do it.
+- Made many test runs to see that score was calculated correctly and that data was read and sent to the google sheets document. 
+- Asked friends and family to visit the deployed Heroku site to see if they could find any bugs or break it in any way.
