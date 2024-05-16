@@ -4,7 +4,9 @@ NFL Quiz game is a Python based quiz game where user will have to answer NFL tri
 To play the quiz you can click this [link](https://henriks-nfl-quiz-568e345c5752.herokuapp.com/).
 
 ![mockup](images/mockup.png)
----
+
+## Intention
+This application was created by me with the porpuse of being my Third Portfolio Project for Code Institutes Full Stack Software Development Course. The main criteria for the Third Portfolio Project was to use Python as the coding language.
 ## Technologies Used
 ### Languages
 * Python was used for the functionality of the program
