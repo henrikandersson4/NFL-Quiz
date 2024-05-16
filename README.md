@@ -68,7 +68,7 @@ Results from PEP8 test:
 
 ![PEP8 Linter](images/PEP8.png)
 
-The two error codes that the code linter points out, are two different functions that are longer than 79 characters. Unfortunately i did not have the time to find a solution for this. But his does not effect the function of the program since its not a visual thing but rather soething that happens in the background.
+The two error codes that the code linter points out, are two different functions that are longer than 79 characters. Unfortunately I did not have the time to find a solution for this. But this does not effect the function of the program since its not a visual thing but rather soething that happens in the background.
 
 ## Deployment
 
@@ -114,6 +114,9 @@ The two error codes that the code linter points out, are two different functions
     - In the 'Deploy' tab there is an option to enable 'Automatic Deploys'. This will deploy a new version of the app automaticlly every time there is a push to `main`
 
 </details>
+
+## Bugs
+- There are no known bugs at the time of deployment.
 
 ## Credits
 - **Stack Overflow**: A online community for developers to ask questions, share knowledge and projects.
