@@ -1,5 +1,10 @@
 # NFL Quiz Game
 NFL Quiz game is a Python based quiz game where user will have to answer NFL trivia questions. The game gives you the option to choose the amount of questions to be played, either 5 or 10. For each question the player is presented with two options, where one is correct and one wrong. If the player answers the question correct, they will get one point. If they get it wrong the game continues to the next question. When the game is finished the player is presented with their finishing score and given the option to submit their final score to the leaderboard.
+
+To play the quiz you can click this [link](https://henriks-nfl-quiz-568e345c5752.herokuapp.com/).
+
+![mockup](images/mockup.png)
+---
 ## Technologies Used
 ### Languages
 * Python was used for the functionality of the program
