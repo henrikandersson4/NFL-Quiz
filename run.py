@@ -5,6 +5,7 @@ import os
 import pyfiglet
 import time
 import gspread
+import random
 from google.oauth2.service_account import Credentials
 from questions import nfl_questions
 
