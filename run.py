@@ -118,6 +118,32 @@ def select_questions():
     ask_to_leaderboard(num_questions, correct_answers)
 
 
+def rules():
+    clear()
+    print("NFL Quiz Rules!\n")
+    print("This quiz consists of 5 or 10 questions. Each question will")
+    print("give you two options")
+    print("'1' or '2' to choose from. To select an option,")
+    print("you type either '1' or '2' depending")
+    print("on which one you think is correct. Only one of the options")
+    print("is correct, so think before")
+    print("you answer!\n")
+    print("Type 'M/m' to return to the Menu.")
+    try:
+        while True:
+            back_to_menu = input("\n").upper()
+            if back_to_menu not in ["M"]:
+                raise ValueError
+            else:
+                clear()
+                game_menu()
+    except ValueError:
+        clear()
+        print("Did you really press 'M/m'? Try again!")
+        time.sleep(2)
+        rules()
+
+
 def ask_to_leaderboard(num_questions, correct_answers):
     if num_questions == 5 and correct_answers <= 2:
         print("Better luck next time!")
