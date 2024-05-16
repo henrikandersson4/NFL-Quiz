@@ -61,7 +61,7 @@ def menu_options():
                 raise ValueError
             else:
                 if option == 'S':
-                    game()
+                    select_questions()
                     break
                 elif option == 'L':
                     leaderboard()
