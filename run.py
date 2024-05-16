@@ -165,6 +165,33 @@ def display_leaderboard(data, description):
     print("")
 
 
+def leaderboard():
+    clear()
+    print("Contacting database...")
+    time.sleep(0.8)
+    print("Loading score from database...")
+    time.sleep(1.5)
+    clear()
+    print("******* Leaderboard *******\n")
+
+    leader_five = get_score_from_sheet('fiveq')
+    leader_ten = get_score_from_sheet('tenq')
+
+    display_leaderboard(leader_five, "5 Questions")
+    display_leaderboard(leader_ten, "10 Questions")
+
+    print("Return to menu, Type 'm or M'")
+    while True:
+        back_to_menu = input("\n").upper()
+        if back_to_menu == "M":
+            clear()
+            game_menu()
+            break
+        else:
+            clear()
+            print("Did you really press 'm or M'? Try again!")
+
+
 def ask_to_leaderboard(num_questions, correct_answers):
     if num_questions == 5 and correct_answers <= 2:
         print("Better luck next time!")
