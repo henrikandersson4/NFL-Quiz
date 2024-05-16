@@ -77,3 +77,42 @@ def menu_options():
         print("'R/r' to see the Rules.\n")
         time.sleep(3)
         game_menu()
+
+
+def select_questions():
+    clear()
+    while True:
+        num_questions = input("How many questions do you want to answer? (5 or 10):\n")
+        if num_questions in ['5', '10']:
+            num_questions = int(num_questions)
+            break
+        else:
+            print("Invalid input! Please choose 5 or 10.")
+
+    questions = random.sample(nfl_questions, num_questions)
+
+    correct_answers = 0
+    for idx, question in enumerate(questions, 1):
+        print(f"\nQuestion {idx}: {question['question']}")
+        for i, option in enumerate(question['options'], 1):
+            print(f"{i}. {option}")
+
+        while True:
+            user_answer = input("Your answer:\n")
+            if user_answer.isdigit() and int(user_answer) in [1, 2]:
+                user_answer = int(user_answer) - 1
+                break
+            else:
+                print("Invalid input! Please type 1 or 2.")
+
+        if question['options'][user_answer] == question['correct']:
+            print("Correct! You get 1 point")
+            correct_answers += 1
+        else:
+            print("Incorrect!")
+            print(f"The correct answer was: {question['correct']}")
+        time.sleep(2)
+
+    print(f"\nYou answered {correct_answers} out of {num_questions} questions correctly.\n")
+    time.sleep(2)
+    ask_to_leaderboard(num_questions, correct_answers)
