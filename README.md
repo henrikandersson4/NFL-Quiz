@@ -38,3 +38,7 @@ The fourth main feature is that you get the option to select if you want to play
 The fifth main feature is that the game gives you the option to submit your score to the leaderborad when you are finished playing if you have reached a certain threshold score or higher. For 5 questions this threshold is 2 points or higher and for 10 questions the threshold is 4 points or higher. If the player chooses to submit the score to the leaderboard then the game will also ask the player to input a name. The score together with the name is then sent over to the [Google Sheet](https://docs.gspread.org/en/v3.7.0/api.html)-document.
 
 ![Ask to leaderboard](images/ask_to_leaderboard.png)
+
+### Future features to add
+- Increase the number of questions the game can randomize between. To avoid players from memorizing all answers.
+- Increase answer options from 2 to 4. To make it harder to guess the correct answer.
