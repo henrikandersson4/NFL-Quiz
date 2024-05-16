@@ -8,12 +8,16 @@ To play the quiz you can click this [link](https://henriks-nfl-quiz-568e345c5752
 ## Intention
 This application was created by me with the porpuse of being my Third Portfolio Project for Code Institutes Full Stack Software Development Course. The main criteria for the Third Portfolio Project was to use Python as the coding language.
 
+
+## How to play
+
+This quiz consists of 5 or 10 questions. Each question will give you two options '1' or '2' to choose from. To select an option, you type either '1' or '2' depending on which one you think is correct. Only one of the options is correct, so think before you answer!
+
 ## Flowchart
 When I was thinking about what to do for my project i had a few different ideas but ended up settling on doing this quiz game. With that decided I started to plan out how the program should work and the logic behind it. To help with this I made a flowchart over how I wanted the logic to be.
 
 ![Flowchart](images/flowchart1.png)
 ![Flowchart](images/flowchart2.png)
-
 
 ## Technologies Used
 The project is built using a [template](https://github.com/Code-Institute-Org/p3-template) from Code Institute that is tailored for Portfolio Project 3.
