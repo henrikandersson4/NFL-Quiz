@@ -281,3 +281,11 @@ def end_game():
                     exit(0)
         except ValueError:
             print("Invalid input! Please input only 'Y/y' or 'N/n'")
+
+
+def main():
+    game_start()
+
+
+if__name__ == "__main__":
+    main()
