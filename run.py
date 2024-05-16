@@ -1,6 +1,3 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
 import os
 import pyfiglet
 import time
@@ -10,7 +7,7 @@ from google.oauth2.service_account import Credentials
 from questions import nfl_questions
 
 
-#The scope below lists the APIs that my program should access in order to run
+# The scope below lists the APIs that my program should access in order to run
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive.file",
@@ -18,29 +15,39 @@ SCOPE = [
     ]
 
 
-#Eveything to do with google credentials below are copied from Code Institute Love Sandwiches project
+"""
+Eveything to do with google credentials below are copied from
+Code Institute Love Sandwiches project
+"""
 CREDS = Credentials.from_service_account_file('creds.json')
 SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('NFL_Quiz')
 
 
-#This function adds the ability to clear the terminal
 def clear():
+    """
+    This function adds the ability to clear the terminal
+    """
     os.system("cls" if os.name == "nt" else "clear")
 
 
-# Function to start the game, 
 def game_start():
-
+    """
+    Function to start the game
+    """
     clear()
     start_text = pyfiglet.figlet_format("N F L  Q U I Z", font="3-d")
     print(start_text)
     game_menu()
 
 
-#Game menu presenting you with the 'NFL Quiz' figlet, aswell as three options whether you want to start the game, see the leader board or see the rules.
 def game_menu():
+    """
+    Game menu presenting you with the 'NFL Quiz' figlet, aswell as three
+    options whether you want to start the game, see the leader board or
+    see the rules.
+    """
     print("Welcome to a 'NFL Quiz' the game that will test your knowledge")
     print("about NFL trivia\n")
     print("Type 'S/s' to start the quiz, 'L/l' to see the leaderboard")
@@ -52,8 +59,11 @@ def game_menu():
     menu_options()
 
 
-#Menu with options to either start the game, see the leadwerboard or to see the rules
 def menu_options():
+    """
+    Menu with options to either start the game, see the
+    leadwerboard or to see the rules
+    """
     try:
         while True:
             option = input().upper()
@@ -82,7 +92,7 @@ def menu_options():
 def select_questions():
     clear()
     while True:
-        num_questions = input("How many questions do you want to answer? (5 or 10):\n")
+        num_questions = input("How many questions do you want? (5 or 10):\n")
         if num_questions in ['5', '10']:
             num_questions = int(num_questions)
             break
@@ -146,7 +156,7 @@ def rules():
 
 def get_score_from_sheet(sheet_name):
     worksheet = SHEET.worksheet(sheet_name)
-    data = worksheet.get_all_values()[1:]  # Skips the header row
+    data = worksheet.get_all_values()[1:]  # Skips the header row in sheet
 
     try:
         data = sorted(data, key=lambda x: int(x[1]), reverse=True)
