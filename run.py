@@ -181,3 +181,28 @@ def player_to_leaderboard(correct_answers, num_questions, player_name):
         player_points_ten.append_row([player_name, correct_answers])
         clear()
         end_game()
+
+
+def end_game():
+    print("Do you want to play again?")
+    print("Type 'Y/y' for yes or")
+    print("'N/n' for no and exit the game")
+    while True:
+        try:
+            players_choice = str(input("Y or N:\n")).upper()
+            if players_choice not in ["Y", "N"]:
+                raise ValueError
+            else:
+                if players_choice == "Y":
+                    clear()
+                    game_start()
+                elif players_choice == "N":
+                    clear()
+                    print("Than you for this time!")
+                    time.sleep(0.8)
+                    print("Shuting down...")
+                    time.sleep(2)
+                    clear()
+                    exit(0)
+        except ValueError:
+            print("Invalid input! Please input only 'Y/y' or 'N/n'")
