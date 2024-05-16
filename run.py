@@ -116,3 +116,29 @@ def select_questions():
     print(f"\nYou answered {correct_answers} out of {num_questions} questions correctly.\n")
     time.sleep(2)
     ask_to_leaderboard(num_questions, correct_answers)
+
+
+def ask_to_leaderboard(num_questions, correct_answers):
+    if num_questions == 5 and correct_answers <= 2:
+        print("Better luck next time!")
+        time.sleep(2)
+        end_game()
+    elif num_questions == 10 and correct_answers <= 4:
+        print("Better luck next time!")
+        time.sleep(2)
+        end_game()
+    else:
+        print("Nice job!")
+        print("Do you want to submit your score to the leaderboard?")
+        print("Input Y/y for yes and N/n for no")
+        while True:
+            submit_to_leaderboard = str(input("Y or N:\n")).upper()
+            if submit_to_leaderboard not in ["Y", "N"]:
+                print(""""Invalid input! Please input only 'Y/y' or 'N/n'""")
+            else:
+                if submit_to_leaderboard == "Y":
+                    name(correct_answers, num_questions)
+                elif submit_to_leaderboard == "N":
+                    clear()
+                    end_game()
+                break
