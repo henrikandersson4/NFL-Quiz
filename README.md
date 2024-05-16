@@ -23,7 +23,7 @@ The project is built using a [template](https://github.com/Code-Institute-Org/p3
 - **Gitpod**: Used as IDE and primary code editor
 - **Heroku**: Used for deploying the program
 - **Google Sheets**: Used as a database to store data
-### Libraries
+### Python Libraries
 * [pyfiglet](https://www.geeksforgeeks.org/python-ascii-art-using-pyfiglet-module/) used to generate the logo
 * [os](https://www.geeksforgeeks.org/clear-screen-python/) used to clear the terminal
 * [time](https://www.programiz.com/python-programming/time/sleep) used for the sleep function
