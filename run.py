@@ -144,6 +144,19 @@ def rules():
         rules()
 
 
+def get_score_from_sheet(sheet_name):
+    worksheet = SHEET.worksheet(sheet_name)
+    data = worksheet.get_all_values()[1:]  # Skips the header row
+
+    try:
+        data = sorted(data, key=lambda x: int(x[1]), reverse=True)
+    except ValueError as e:
+        print(f"Error sorting data: {e}")
+        return []
+
+    return data
+
+
 def ask_to_leaderboard(num_questions, correct_answers):
     if num_questions == 5 and correct_answers <= 2:
         print("Better luck next time!")
