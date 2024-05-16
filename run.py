@@ -217,6 +217,7 @@ def ask_to_leaderboard(num_questions, correct_answers):
                     end_game()
                 break
 
+
 def name(correct_answers, num_questions):
     print("\nPlease type a name using no more than 10 characters containing")
     print("only letters and/or numbers")
